@@ -1,0 +1,19 @@
+<% @genres.each do |genre| %>
+  <p>
+    <strong>Name:</strong> <%= genre.name %>
+  </p>
+  <p>
+    <strong>Description:</strong> <%= genre.description %>
+  </p>
+  <p>
+    <strong>Songs:</strong>
+      <ul>
+
+        <% genre.song.each do |song| %>
+          <li><%= song.name %></li>
+        <% end %>
+      </ul>
+
+  </p>
+  <br>
+<% end %>
